@@ -1,5 +1,10 @@
 package com.cjc.serviceI;
 
-public interface StudentServiceI {
+import com.cjc.model.Student;
+
+public interface StudentServiceI 
+{
+
+public void saveStudent(Student s);
 
 }
