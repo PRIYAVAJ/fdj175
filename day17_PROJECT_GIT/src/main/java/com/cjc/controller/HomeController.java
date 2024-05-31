@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.cjc.model.Student;
 import com.cjc.serviceI.StudentServiceI;
 
@@ -54,7 +55,14 @@ public class HomeController
 		return list;
 		
 	}
-	
+	@GetMapping("/user/{rollno}")
+	public Student exposeStudent(@PathVariable int rollno)
+	{
+		 Student user=ssi.getSingleStudent(rollno);
+		
+		
+		return user;
+	}
 	
 	
 	

@@ -3,6 +3,7 @@ package com.cjc.serviceImpl;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,4 +39,17 @@ public class StudentServiceImpl implements StudentServiceI
 		return sri.findAll();
 	}
 
+	@Override
+	public Student getSingleStudent(int rollno) {
+		  
+		   Optional<Student> opUser = sri.findById(rollno);
+		     if(opUser.isPresent())
+		     {
+		    	 Student user=opUser.get();
+		    	 return user;
+		     }
+			return null;
+		   
+	
+	}
 }
