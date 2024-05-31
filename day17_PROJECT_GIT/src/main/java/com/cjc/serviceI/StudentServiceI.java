@@ -19,6 +19,10 @@ public void save(Student s);
 public List<Student> Student();
 
 
+
+public void updatData(com.cjc.model.Student stu);
+
+
 }
 
 

@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -54,6 +55,13 @@ public class HomeController
 		return list;
 		
 	}
+	
+	@PutMapping("/updateData")
+	public String UpdateData(@RequestBody Student  stu) {
+		ssi.updatData(stu);
+		return"update Success.........!:)";
+	}
+	
 	
 	
 	

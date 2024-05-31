@@ -38,4 +38,10 @@ public class StudentServiceImpl implements StudentServiceI
 		return sri.findAll();
 	}
 
+	@Override
+	public void updatData(com.cjc.model.Student stu) {
+		sri.save(stu);
+		
+	}
+
 }
