@@ -1,5 +1,11 @@
 package com.cjc.controller;
-
-public class HomeController {
+@RestController
+public class HomeController 
+{
+	@PostMapping("/addStu")
+	public String addStudent()
+	{
+		return "added successfully";
+	}
 
 }
