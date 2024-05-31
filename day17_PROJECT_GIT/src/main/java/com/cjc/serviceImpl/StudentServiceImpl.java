@@ -40,6 +40,7 @@ public class StudentServiceImpl implements StudentServiceI
 	}
 
 	@Override
+
 	public Student getSingleStudent(int rollno) {
 		  
 		   Optional<Student> opUser = sri.findById(rollno);
@@ -52,4 +53,10 @@ public class StudentServiceImpl implements StudentServiceI
 		   
 	
 	}
+
+	public void updatData(com.cjc.model.Student stu) {
+		sri.save(stu);
+		
+	}
+
 }

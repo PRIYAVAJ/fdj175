@@ -24,9 +24,13 @@ public List<Student> Student();
 
 
 
+
 public com.cjc.model.Student getSingleStudent(int rollno);
 
 
+
+
+public void updatData(com.cjc.model.Student stu);
 
 
 
